@@ -25,7 +25,7 @@ export default function MiniCart({ cart }) {
 				as='div'
 				className='fixed z-50'
 				onClose={() => {
-					setCartOpen(!cartOpen); // close the cart
+					setCartOpen(setCartOpen); // close the cart
 				}}
 			>
 				<Transition.Child
