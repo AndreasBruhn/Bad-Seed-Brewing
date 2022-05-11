@@ -1,9 +1,12 @@
 import { useState, useContext } from 'react';
 import { formatter } from '../utils/helpers';
 import ProductOptions from './ProductOptions';
+import { CartContext } from '../context/shopContext';
 
 export default function ProductForm({ product }) {
-	// console.log(product);
+ // console.log(product)
+	const { addToCart } = useContext(CartContext);
+
 	const allVariantOptions = product.variants.edges?.map((variant) => {
 		const allOptions = {};
 
@@ -11,6 +14,7 @@ export default function ProductForm({ product }) {
 			allOptions[option.name] = option.value;
 		});
 
+		// used in miniCart component to display product details
 		return {
 			id: variant.node.id,
 			title: product.title,
@@ -37,6 +41,18 @@ export default function ProductForm({ product }) {
 		setSelectedOptions((prevState) => {
 			return { ...prevState, [name]: value };
 		});
+
+  // NEEDS TO BE EXPLAINED
+		const selection = {
+			...selectedOptions,
+			[name]: value,
+		};
+
+		allVariantOptions.map((item) => {
+			if (JSON.stringify(item.options) === JSON.stringify(selection)) {
+				setSelectedVariant(item);
+			}
+		});
 	}
 
 	// option selector on product page
@@ -55,7 +71,12 @@ export default function ProductForm({ product }) {
 					setOptions={setOptions}
 				/>
 			))}
-			<button className='bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800'>
+			<button
+				className='bg-black rounded-lg text-white px-2 py-3 hover:bg-gray-800'
+				onClick={() => {
+					addToCart(selectedVariant);
+				}}
+			>
 				Add To Card
 			</button>
 		</div>

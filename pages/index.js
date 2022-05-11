@@ -3,15 +3,8 @@ import ProductList from '../components/ProductList';
 
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 export default function Home({ products }) {
-	console.log(products);
-
 	return (
 		<div className=''>
-			{/* preview out data in browser window  */}
-			{/* <pre>
-      {JSON.stringify(products, null, 2)}
-    </pre> */}
-
 			<ProductList products={products} />
 		</div>
 	);
