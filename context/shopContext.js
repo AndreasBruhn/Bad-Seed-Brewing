@@ -27,7 +27,7 @@ export default function ShopProvider({ children }) {
 	}, []);
 
 	async function addToCart(newItem) {
-		setCartOpen(true);
+		setCartOpen(true); // "true" åbner kurven når en vare er tilføjes til kurv
 
 		if (cart.length === 0) {
 			setCart([newItem]);

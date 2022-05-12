@@ -21,7 +21,7 @@ export default function Nav() {
 					</a>
 				</Link>
 				<a className='text-md font-bold cursor-pointer' onClick={() => setCartOpen(!cartOpen)}>
-					Card ({cartQuantity})
+					Kurv ({cartQuantity})
 				</a>
 				<MiniCart cart={cart} />
 			</div>

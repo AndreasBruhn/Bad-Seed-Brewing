@@ -4,7 +4,6 @@ import ProductOptions from './ProductOptions';
 import { CartContext } from '../context/shopContext';
 
 export default function ProductForm({ product }) {
- // console.log(product)
 	const { addToCart } = useContext(CartContext);
 
 	const allVariantOptions = product.variants.edges?.map((variant) => {
@@ -77,7 +76,7 @@ export default function ProductForm({ product }) {
 					addToCart(selectedVariant);
 				}}
 			>
-				Add To Card
+				Tilføj til ølkasse
 			</button>
 		</div>
 	);
