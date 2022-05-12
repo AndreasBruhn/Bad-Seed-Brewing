@@ -9,7 +9,7 @@ export default function ProductPageContent({ product }) {
 				<div className='w-full max-w-md border bg-white rounded-2xl overflow-hidden shadow-lg md:w-1/2'>
 					<div className='relative h-96 w-full'>
 						<Image
-							src={product.images.edges[0].node.url}
+							src={product.images.edges[0].node.src}
 							alt={product.images.edges[0].node.altText}
 							layout={'fill'}
 							objectFit={'cover'}
@@ -23,6 +23,7 @@ export default function ProductPageContent({ product }) {
 			</p>
 			<RecommendedList
 				current={product.id}
+				// product={product}
 				products={product.collections.edges[0].node.products.edges}
 			/>
 		</div>

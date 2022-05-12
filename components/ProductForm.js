@@ -18,7 +18,7 @@ export default function ProductForm({ product }) {
 			id: variant.node.id,
 			title: product.title,
 			handle: product.handle,
-			image: variant.node.image?.url, // if there is no image, it will return null
+			image: variant.node?.image?.url, // if there is no image, it will return null
 			options: allOptions,
 			variantTitle: variant.node.title,
 			variantPrice: variant.node.priceV2.amount,
