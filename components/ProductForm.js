@@ -41,7 +41,7 @@ export default function ProductForm({ product }) {
 			return { ...prevState, [name]: value };
 		});
 
-  // NEEDS TO BE EXPLAINED
+  // NEEDS TO BE EXPLAINED!
 		const selection = {
 			...selectedOptions,
 			[name]: value,
