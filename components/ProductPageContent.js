@@ -9,7 +9,7 @@ export default function ProductPageContent({ product }) {
 				<div className='w-full max-w-md border bg-white rounded-2xl overflow-hidden shadow-lg md:w-1/2'>
 					<div className='relative h-96 w-full'>
 						<Image
-							src={product.images.edges[0].node.src}
+							src={product.images.edges[0].node.url}
 							alt={product.images.edges[0].node.altText}
 							layout={'fill'}
 							objectFit={'cover'}

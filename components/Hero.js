@@ -1,30 +1,29 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
 	return (
-		<div className='my-48 mx-auto max-w-7xl px-4 sm:mt-24 md:mt-72 text-center'>
-			<h1 className='font-extrabold text-gray-900'>
-				<p className='text-xl sm:text-3xl md:text-4xl'>Bad Seed Brewing</p>
-				<p className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-4xl sm:text-6xl md:text-7xl'>
-					Craft Beer
-				</p>
-			</h1>
-			<h2 className='mt-3 max-w-md mx-auto text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-x-3xl'>
-				Beer craft at its best.
-			</h2>
-			<div className='mt-5 max-w-md mx-auto flex justify-center items-center md:mt-8'>
-				<a
-					href='https://buildnextshop.com'
-					className='inline-flex items-center justify-center h-12 px-6 mr-6 font-medium py-3 border-transparent rounded-md text-white bg-gray-900 hover:bg-gray-800'
-				>
-					Gå til shop
-				</a>
-				<a
-					href='https://buildnextshop.com'
-					className='inline-flex items-center font-semibold text-gray-900 hover:text-gray-800'
-				>
-					lær mere om BSB
-				</a>
+		<div className={'min-h-screen justify-center mx-auto flex flex-col sm:flex-row flex-wrap'}>
+			<div className='w-full md:w-1/2 flex flex-start flex-col justify-center bg-white'>
+				<Image src={require('../assets/img/hero-img.jpg')} alt='hero' layout='responsive' />
+			</div>
+			<div className='w-full flex flex-start flex-col justify-center bg-black md:w-1/2'>
+				<h1 className='font-extrabold text-gray-900'>
+					<p className='text-white text-4xl sm:text-5xl md:text-6xl'>
+						Dristig, smagfuld og letdrikkelig øl.
+					</p>
+				</h1>
+				<h2 className='mt-3 max-w-md text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-x-3xl'>
+					Gå på opdagelse i vores mange varianter af specialøl.
+				</h2>
+				<div className='mt-5 max-w-md flex items-center md:mt-8'>
+					<a
+						href='https://buildnextshop.com'
+						className='inline-flex justify-center px-12 font-medium py-3 border-2 border-white text-white bg-transparent hover:bg-white hover:text-black hover:border-black'
+					>
+						Shop her
+					</a>
+				</div>
 			</div>
 		</div>
 	);
