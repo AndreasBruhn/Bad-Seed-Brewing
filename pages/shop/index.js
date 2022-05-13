@@ -7,23 +7,6 @@ import Head from 'next/head';
 export default function Shop({ products }) {
 	return (
 		<div className=''>
-			<Head>
-				<title>Bad Seed Brewing</title>
-				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
-				<meta httpEquiv='Content-Type' content='text/html; charset=ISO-8859-1' />
-				<meta name='description' content='Bad Seed Brewing' />
-				<meta property='og:title' content='Bad Seed Brewing' />
-				<meta property='og:type' content='website' />
-				<meta property='og:url' content='https://bsb-v1.vercel.app/' />
-				<meta property='og:image' content='https://bsb-v1.vercel.app/bad-seed-brewing-logo.jpg' />
-				<meta
-					property='og:description'
-					content='Bad Seed Brewing is a small danish company specialized in the of craft beer.'
-				/>
-				<meta property='og:locale' content='dk_DK' />
-				<meta property='og:site_name' content='Bad Seed Brewing' />
-			</Head>
-			<Hero />
 			<ProductList products={products} />
 		</div>
 	);
