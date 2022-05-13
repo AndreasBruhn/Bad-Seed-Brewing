@@ -4,7 +4,6 @@ import { CartContext } from '../context/shopContext';
 import MiniCart from './MiniCart';
 import Image from 'next/image';
 
-
 export default function Nav() {
 	const { cart, cartOpen, setCartOpen } = useContext(CartContext);
 
@@ -30,9 +29,20 @@ export default function Nav() {
 						</span>
 					</a>
 				</Link>
-				<a className='text-md font-bold cursor-pointer' onClick={() => setCartOpen(!cartOpen)}>
-					Kurv ({cartQuantity})
-				</a>
+				<nav className='ml-6 space-x-6'>
+					<Link href='/'>
+						<a className=''>Hjem</a>
+					</Link>
+					<Link href='/shop'>
+						<a className=''>Shop</a>
+					</Link>
+					<Link href='/about'>
+						<a className=''>Om os</a>
+					</Link>
+					<a className='text-md font-bold cursor-pointer' onClick={() => setCartOpen(!cartOpen)}>
+						Kurv ({cartQuantity})
+					</a>
+				</nav>
 				<MiniCart cart={cart} />
 			</div>
 		</header>
