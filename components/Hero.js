@@ -19,7 +19,7 @@ export default function Hero() {
 						Gå på opdagelse i vores mange varianter af specialøl.
 					</h2>
 					<div className='mt-5 max-w-md flex items-center md:mt-8'>
-						<Link href='/' passHref>
+						<Link href='/shop' passHref>
 							<a className='inline-flex justify-center px-12 font-medium py-3 border-2 border-white text-white bg-transparent hover:bg-white hover:text-black hover:border-black'>
 								Shop her
 							</a>
