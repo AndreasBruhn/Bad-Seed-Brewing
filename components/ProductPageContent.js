@@ -12,7 +12,7 @@ export default function ProductPageContent({ product }) {
 		console.log(image);
 		images.push(
 			<SwiperSlide key={`slide-${i}`}>
-				<Image src={image.node.url} alt={image.node.altText} layout='fill' objectFit='contain' />
+				<Image src={image.node.url} alt={image.node.altText} layout='fill' objectFit='cover' />
 			</SwiperSlide>
 		);
 	});
@@ -51,7 +51,7 @@ export default function ProductPageContent({ product }) {
 				{product.description}
 			</p>
 			<RecommendedList
-			
+
 				current={product.id}
 				// product={product}
 				products={product.collections.edges[0].node.products.edges}
