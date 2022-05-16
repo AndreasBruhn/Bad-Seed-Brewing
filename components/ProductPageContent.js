@@ -20,11 +20,11 @@ export default function ProductPageContent({ product }) {
 	return (
 		<>
 			<div className='flex flex-col justify-center items-center space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 max-w-6xl w-11/12 mx-auto'>
-				<div className='w-full max-w-md border bg-white rounded-2xl overflow-hidden shadow-lg md:w-1/2'>
-					<div className='relative h-96 w-full'>
+				<div className='w-full h-full max-w-md  bg-white  overflow-hidden  md:w-1/2'>
+					<div className='relative  h-[700px] w-full'>
 						<Swiper
 							style={{
-								'--swiper-navigation-color': '#000',
+								'--swiper-navigation-color': '#fff',
 								'--swiper-pagination-color': '#fff',
 								'--swiper-navigation-size': '35px',
 							}}
@@ -33,7 +33,7 @@ export default function ProductPageContent({ product }) {
 							navigation={true}
 							pagination={{ dynamicBullets: true }}
 							modules={[FreeMode, Navigation, Pagination]}
-							className='mySwiper2'
+							className='mySwiper2 border rounded-2xl shadow-lg'
 						>
 							{images}
 						</Swiper>
@@ -51,7 +51,6 @@ export default function ProductPageContent({ product }) {
 				{product.description}
 			</p>
 			<RecommendedList
-
 				current={product.id}
 				// product={product}
 				products={product.collections.edges[0].node.products.edges}
