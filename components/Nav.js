@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { CartContext } from '../context/shopContext';
 import MiniCart from './MiniCart';
 import Image from 'next/image';
+import { ShoppingBagIcon } from '@heroicons/react/outline';
 
 export default function Nav() {
 	const { cart, cartOpen, setCartOpen } = useContext(CartContext);
@@ -29,7 +30,7 @@ export default function Nav() {
 						</span>
 					</a>
 				</Link>
-				<nav className='ml-6 space-x-6'>
+				<nav className='flex ml-6 space-x-6'>
 					<Link href='/'>
 						<a className=''>Hjem</a>
 					</Link>
@@ -39,8 +40,11 @@ export default function Nav() {
 					<Link href='/about'>
 						<a className=''>Om os</a>
 					</Link>
-					<a className='text-md font-bold cursor-pointer' onClick={() => setCartOpen(!cartOpen)}>
-						Kurv ({cartQuantity})
+					<a
+						className='text-md font-bold cursor-pointer relative'
+						onClick={() => setCartOpen(!cartOpen)}
+					>
+						<ShoppingBagIcon className='h-7 w-7' /> <span className='bg-black flex items-center justify-center w-6 h-6 text-white rounded-full absolute bottom-[65%] left-[70%]'>{cartQuantity}</span>
 					</a>
 				</nav>
 				<MiniCart cart={cart} />
