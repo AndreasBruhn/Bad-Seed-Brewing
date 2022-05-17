@@ -5,6 +5,7 @@ import Head from 'next/head';
 import BannerHighlights from '../components/BannerHighlights';
 import FeaturedSection from '../components/FeaturedSection';
 import Marquee from '../components/Marquee';
+import ProductGrid from '../components/ProductGrid';
 
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 export default function Home({ products }) {
@@ -30,7 +31,8 @@ export default function Home({ products }) {
 			<BannerHighlights />
 			<FeaturedSection />
 			<Marquee headline='Øl med omtanke' />
-			<ProductList products={products} />
+			<ProductGrid products={products} />
+			{/* <ProductList products={products} /> */}
 		</div>
 	);
 }
