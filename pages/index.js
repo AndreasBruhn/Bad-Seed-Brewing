@@ -29,7 +29,7 @@ export default function Home({ products }) {
 			<Hero />
 			<BannerHighlights />
 			<FeaturedSection />
-			<Marquee />
+			<Marquee headline='Øl med omtanke' />
 			<ProductList products={products} />
 		</div>
 	);

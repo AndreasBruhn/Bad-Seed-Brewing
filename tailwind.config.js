@@ -10,6 +10,9 @@ module.exports = {
 				'65%': '65%',
 				'70%': '70%',
 			},
+			backdropBlur: {
+				xs: '.1px',
+			},
 		},
 	},
 	plugins: [],
