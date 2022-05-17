@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import BannerHighlights from './BannerHighlights';
 
 export default function Hero() {
 	return (
@@ -27,7 +26,6 @@ export default function Hero() {
 					</div>
 				</div>
 			</div>
-			<BannerHighlights />
 		</>
 	);
 }

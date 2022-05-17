@@ -2,6 +2,8 @@ import { getProductsInCollection } from '../lib/query';
 import ProductList from '../components/ProductList';
 import Hero from '../components/Hero';
 import Head from 'next/head';
+import BannerHighlights from '../components/BannerHighlights';
+import FeaturedSection from '../components/FeaturedSection';
 
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 export default function Home({ products }) {
@@ -20,10 +22,12 @@ export default function Home({ products }) {
 					property='og:description'
 					content='Bad Seed Brewing is a small danish company specialized in the of craft beer.'
 				/>
-				<meta property="og:locale" content="dk_DK" />
-				<meta property="og:site_name" content="Bad Seed Brewing" />
+				<meta property='og:locale' content='dk_DK' />
+				<meta property='og:site_name' content='Bad Seed Brewing' />
 			</Head>
 			<Hero />
+			<BannerHighlights />
+			<FeaturedSection />
 			<ProductList products={products} />
 		</div>
 	);

@@ -9,7 +9,7 @@ export default function ProductPageContent({ product }) {
 	const images = [];
 
 	product.images.edges.map((image, i) => {
-		console.log(image);
+		console.log(product.title);
 		images.push(
 			<SwiperSlide key={`slide-${i}`}>
 				<Image src={image.node.url} alt={image.node.altText} layout='fill' objectFit='cover' />
