@@ -4,6 +4,7 @@ import Hero from '../components/Hero';
 import Head from 'next/head';
 import BannerHighlights from '../components/BannerHighlights';
 import FeaturedSection from '../components/FeaturedSection';
+import Marquee from '../components/Marquee';
 
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 export default function Home({ products }) {
@@ -28,6 +29,7 @@ export default function Home({ products }) {
 			<Hero />
 			<BannerHighlights />
 			<FeaturedSection />
+			<Marquee />
 			<ProductList products={products} />
 		</div>
 	);
