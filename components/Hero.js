@@ -6,7 +6,7 @@ export default function Hero() {
 		<>
 			<div className='h-full md:h-screen justify-center mx-auto flex flex-col md:flex-row flex-wrap'>
 				<div className='bg-gradient-to-t w-1/2 from-green-300 to-blue-400 flex flex-start flex-col justify-center'>
-					<div className=' relative md:left-40 scale-125 md:w-full bg-transparent'>
+					<div className=' relative md:left-40 md:scale-125 md:w-full bg-transparent'>
 						<Image src={require('../assets/img/hero-img.png')} alt='hero' layout='responsive' />
 					</div>
 				</div>

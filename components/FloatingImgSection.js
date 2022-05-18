@@ -8,7 +8,7 @@ export default function FloatingImgSection() {
 	return (
 		<section className='h-[700px] flex flex-col flex-wrap md:flex-row max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
 			<div className='flex flex-col justify-center w-full mb-8 md:m-0 md:w-1/3'>
-				<h2 className='text-2xl font-extrabold text-gray-900 mb-6'>
+				<h2 className='text-2xl md:text-4xl font-extrabold text-gray-900 mb-6'>
 					Øl, der får dig til at sidde op og mærke efter
 				</h2>
 				<p>
