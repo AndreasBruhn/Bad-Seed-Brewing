@@ -5,8 +5,10 @@ export default function Hero() {
 	return (
 		<>
 			<div className='h-full md:h-screen justify-center mx-auto flex flex-col md:flex-row flex-wrap'>
-				<div className='w-full md:w-1/2 flex flex-start flex-col justify-center bg-white'>
-					<Image src={require('../assets/img/hero-img.png')} alt='hero' layout='responsive' />
+				<div className='bg-gradient-to-t w-1/2 from-green-300 to-blue-400 flex flex-start flex-col justify-center'>
+					<div className=' relative md:left-40 scale-125 md:w-full bg-transparent'>
+						<Image src={require('../assets/img/hero-img.png')} alt='hero' layout='responsive' />
+					</div>
 				</div>
 				<div className='w-full flex flex-start flex-col justify-center p-16 bg-black md:w-1/2'>
 					<h1 className='font-extrabold text-gray-900'>
