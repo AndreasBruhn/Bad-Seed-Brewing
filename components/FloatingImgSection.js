@@ -24,16 +24,14 @@ export default function FloatingImgSection() {
 					</Link>
 				</div>
 			</div>
-			<div className='w-full relative h-auto grid grid-cols-1 grid-rows-1 md:grid-cols-12 md:grid-rows-6 md:w-2/3'>
-				<div className='grid row-start-1 row-end-4 col-start-7 col-end-13'>
+			<div className='w-full relative h-auto md:w-2/3'>
+				<Parallax speed={3} className='absolute top-96 left-2/3 w-96 h-96'>
 					<Image src={require('../assets/img/2BeerGlass.png')} alt='hero' layout='responsive' />
-				</div>
-
-				<div className='grid row-start-3 row-end-6 col-start-5 col-end-11  bg-floating-yellow'></div>
-
-				<div className='grid row-start-5 row-end-7 col-start-7 col-end-12'>
+				</Parallax>
+				<Parallax speed={3} className='h-96 w-96 absolute -bottom-96 bg-floating-yellow'></Parallax>
+				<Parallax speed={3} className='absolute -bottom-96 left-1/3 w-96 h-96'>
 					<Image src={require('../assets/img/pouringBeer.png')} alt='hero' layout='responsive' />
-				</div>
+				</Parallax>
 			</div>
 		</section>
 	);
