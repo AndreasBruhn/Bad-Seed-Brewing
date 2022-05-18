@@ -11,7 +11,7 @@ import FloatingImgSection from '../components/FloatingImgSection';
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 export default function Home({ products }) {
 	return (
-		<div className=''>
+		<div className='relative'>
 			<Head>
 				<title>Bad Seed Brewing</title>
 				<meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />

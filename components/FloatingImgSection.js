@@ -6,7 +6,7 @@ import Parallax from 'react-rellax';
 
 export default function FloatingImgSection() {
 	return (
-		<section className='flex relative flex-col flex-wrap md:flex-row max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
+		<section className='h-[700px] flex flex-col flex-wrap md:flex-row max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
 			<div className='flex flex-col justify-center w-full mb-8 md:m-0 md:w-1/3'>
 				<h2 className='text-2xl font-extrabold text-gray-900 mb-6'>
 					Øl, der får dig til at sidde op og mærke efter
@@ -24,14 +24,16 @@ export default function FloatingImgSection() {
 					</Link>
 				</div>
 			</div>
-			<div className='w-full relative h-auto md:w-2/3'>
-				<Parallax speed={3} className='absolute top-96 left-2/3 w-96 h-96'>
-					<Image src={require('../assets/img/2BeerGlass.png')} alt='hero' layout='responsive' />
-				</Parallax>
-				<Parallax speed={3} className='h-96 w-96 absolute -bottom-96 bg-floating-yellow'></Parallax>
-				<Parallax speed={3} className='absolute -bottom-96 left-1/3 w-96 h-96'>
+			<div className=' flex flex-col md:relative h-auto md:w-2/3'>
+				<div className="md:absolute w-full md:w-72 md:left-96 md:z-10">
+     <Image src={require('../assets/img/2BeerGlass.png')} alt='hero' layout='responsive' />
+    </div>
+
+				<div className='hidden md:block bg-floating-yellow md:absolute h-72 w-96 md:top-32 md:left-56'></div>
+
+				<div className='md:absolute md:h-96 md:w-96 md:top-80 md:left-64 z-10'>
 					<Image src={require('../assets/img/pouringBeer.png')} alt='hero' layout='responsive' />
-				</Parallax>
+				</div>
 			</div>
 		</section>
 	);
