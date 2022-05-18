@@ -24,14 +24,14 @@ export default function FloatingImgSection() {
 					</Link>
 				</div>
 			</div>
-			<div className=' flex flex-col md:relative h-auto md:w-2/3'>
-				<div className="md:absolute w-full md:w-72 md:left-96 md:z-10">
+			<div className='flex flex-col md:relative h-auto md:w-2/3'>
+				<div className="md:absolute w-full md:w-72 md:left-96 md:z-10 rounded-t-full overflow-hidden">
      <Image src={require('../assets/img/2BeerGlass.png')} alt='hero' layout='responsive' />
     </div>
 
 				<div className='hidden md:block bg-floating-yellow md:absolute h-72 w-96 md:top-32 md:left-56'></div>
 
-				<div className='md:absolute md:h-96 md:w-96 md:top-80 md:left-64 z-10'>
+				<div className='md:absolute md:h-96 md:w-96 md:top-80 md:left-64 z-10 rounded-full overflow-hidden'>
 					<Image src={require('../assets/img/pouringBeer.png')} alt='hero' layout='responsive' />
 				</div>
 			</div>

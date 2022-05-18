@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function Hero() {
 	return (
 		<>
-			<div className='min-h-screen justify-center mx-auto flex flex-col sm:flex-row flex-wrap'>
+			<div className='h-full md:h-screen justify-center mx-auto flex flex-col md:flex-row flex-wrap'>
 				<div className='w-full md:w-1/2 flex flex-start flex-col justify-center bg-white'>
 					<Image src={require('../assets/img/hero-img.png')} alt='hero' layout='responsive' />
 				</div>
