@@ -8,7 +8,7 @@ export default function BannerHighlights() {
 				<p>Fri fragt over 599 kr</p>
 			</div>
 			<div className='flex items-center justify-center'>
-				<CubeIcon className='h-5 w-5 mr-1 my-1 text-gray-900' />
+				<CubeIcon className='h-5 w-5 mr-1 text-gray-900' />
 				<p>Produceret i Danmark</p>
 			</div>
 			<div className='flex items-center justify-center'>
