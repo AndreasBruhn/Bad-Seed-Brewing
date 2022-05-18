@@ -14,7 +14,7 @@ export default function Marquee({ headline }) {
 			<div className='w-full h-full backdrop-blur-xs bg-black/40'>
 				<div className='w-full py-24 md:py-64 '>
 					<Ticker offset={80}>
-						{() => <h2 className='text-3xl md:text-7xl font-extrabold mx-32'> {headline} </h2>}
+						{() => <h2 className='text-3xl md:text-7xl font-extrabold mr-32'> {headline} </h2>}
 					</Ticker>
 				</div>
 			</div>
