@@ -7,7 +7,7 @@ export default function ProductGrid({ products }) {
 		<div className='bg-white'>
 			<div className='max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8'>
 				<div className='grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8'>
-					<div className='flex flex-col md:row-span-2'>
+					<div className='row-span-1 md:row-span-2'>
 						<h2 className='text-2xl font-extrabold text-gray-900 mb-6'>Populære Produkter</h2>
 						<p>Et håndplukket udvalg af vores bedst sælgende produkter.</p>
 						<Link href='/shop' passHref>
