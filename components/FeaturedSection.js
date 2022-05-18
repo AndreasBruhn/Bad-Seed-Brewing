@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function FeaturedSection() {
 	return (
-		<div className='grid grid-cols-1 md:grid-cols-12 md:mb-32 md:flex-row max-w-2xl md:max-w-7xl mx-auto text-white'>
+		<section className='grid grid-cols-1 md:grid-cols-12 md:mb-32 md:flex-row max-w-2xl md:max-w-7xl mx-auto text-white'>
 			<div className='col-span-5 w-full flex flex-col justify-center bg-gradient-to-b from-black to-zinc-800 p-12'>
 				<h2 className='text-3xl sm:text-5xl mb-6'>Ølsmagning to go</h2>
 				<p className=''>
@@ -19,6 +19,6 @@ export default function FeaturedSection() {
 			<div className='col-span-7 w-full flex flex-start flex-col justify-center bg-white'>
 				<Image src={require('../assets/img/featuredSection.png')} alt='hero' layout='responsive' />
 			</div>
-		</div>
+		</section>
 	);
 }

@@ -75,6 +75,10 @@ a {
 	object-fit: cover;
 }
 
+.btn-container:hover > .icon {
+	color: #fff;
+}
+
 .btn-container:hover > a > .icon {
 	color: #fff;
 }

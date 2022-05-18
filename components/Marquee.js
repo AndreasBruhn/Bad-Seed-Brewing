@@ -6,7 +6,7 @@ export default function Marquee({ headline }) {
 		<div
 			className='flex my-auto w-full text-white md:h-[600px]'
 			style={{
-				backgroundImage: 'url(/MarqueeBgImg.png)',
+				backgroundImage: 'url(/images/MarqueeBgImg.png)',
 				backgroundRepeat: 'no-repeat',
 				backgroundSize: 'cover',
 			}}
