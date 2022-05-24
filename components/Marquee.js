@@ -4,7 +4,7 @@ import Ticker from 'react-ticker';
 export default function Marquee({ headline }) {
 	return (
 		<div
-			className='flex my-auto w-full text-white md:h-[600px]'
+			className='flex my-auto w-full text-white md:h-[600px] max-w-2xl mx-auto md:max-w-7xl'
 			style={{
 				backgroundImage: 'url(/images/MarqueeBgImg.png)',
 				backgroundRepeat: 'no-repeat',
