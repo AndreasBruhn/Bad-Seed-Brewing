@@ -29,15 +29,14 @@ const filters = [
 			{ value: 'pilsner', label: 'Pilsner', checked: true },
 			{ value: 'lager', label: 'Lager', checked: false },
 			{ value: 'rauchbier', label: 'Rauchbier', checked: false },
-			{ value: 'purple', label: 'Purple', checked: false },
 		],
 	},
 	{
 		id: 'procent',
 		name: 'Procent',
 		options: [
-			{ value: '4-5', label: '4-5', checked: false },
-			{ value: '6-8', label: '6-8', checked: true },
+			{ value: '4-5', label: '4-5%', checked: false },
+			{ value: '6-8', label: '6-8%', checked: true },
 		],
 	},
 ];

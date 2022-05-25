@@ -1,5 +1,6 @@
-export const formatter = new Intl.NumberFormat('en-US', {
+export const formatter = new Intl.NumberFormat('dk-DK', {
  style: 'currency',
- currency: 'USD',
+ currency: 'DKK',
  minimumFractionDigits: 2,
 })
+ 

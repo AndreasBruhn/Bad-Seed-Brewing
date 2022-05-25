@@ -5,6 +5,14 @@ import MiniCart from './MiniCart';
 import Image from 'next/image';
 import { ShoppingBagIcon } from '@heroicons/react/outline';
 
+const navigation = [
+	{ name: 'Dashboard', href: '#', current: true },
+	{ name: 'Team', href: '#', current: false },
+	{ name: 'Projects', href: '#', current: false },
+	{ name: 'Calendar', href: '#', current: false },
+]
+
+
 export default function Nav() {
 	const { cart, cartOpen, setCartOpen } = useContext(CartContext);
 
