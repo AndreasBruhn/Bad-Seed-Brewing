@@ -21,6 +21,11 @@ module.exports = {
 				10: 'repeat(10, minmax(0, 1fr))',
 				11: 'repeat(11, minmax(0, 1fr))',
 				12: 'repeat(12, minmax(0, 1fr))',
+				masonry: 'repeat(8, 5vw)',
+			},
+			gridTemplateColumns: {
+				// Complex site-specific column configuration
+				masonry: 'repeat(8, 1fr)',
 			},
 			colors: {
 				'floating-yellow': '#FCB64D',
