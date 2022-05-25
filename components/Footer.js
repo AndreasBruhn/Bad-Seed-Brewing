@@ -37,7 +37,7 @@ const info3 = [
 
 export default function Footer() {
 	return (
-		<footer className='bg-black h-auto text-gray-300'>
+		<footer className='bg-black h-auto text-gray-300 mt-24'>
 			<div className='grid grid-cols-1 md:grid-cols-3 md:gap-24 max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8'>
 				{info1.map((item, index) => (
 					<div className='flex flex-col' key={index}>
