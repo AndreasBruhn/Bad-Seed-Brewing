@@ -21,7 +21,7 @@ export default function Hero() {
 					</h2>
 					<div className='mt-5 max-w-md flex items-center md:mt-8'>
 					<Link href='/shop' passHref>
-							<a className='inline-flex justify-center px-12 font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
+							<a className='inline-flex justify-center px-12 w-3/5 font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
 								Shop her
 							</a>
 						</Link>
