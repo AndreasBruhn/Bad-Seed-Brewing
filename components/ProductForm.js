@@ -23,6 +23,7 @@ export default function ProductForm({ product }) {
 			variantTitle: variant.node.title,
 			variantPrice: variant.node.priceV2.amount,
 			variantQuantity: 1,
+			newVariantQuantity: 1
 		};
 	});
 
@@ -56,7 +57,7 @@ export default function ProductForm({ product }) {
 
 	// option selector on product page
 	return (
-		<div className='rounded-2xl p-4 shadow-lg flex flex-col w-full md:w-1/3'>
+		<div className='p-4 flex flex-col w-full md:w-1/3'>
 			<h2 className='text-2xl font-bold'> {product.title} </h2>
 			<span className='pb-3'>
 				{formatter.format(product.variants.edges[0].node.priceV2.amount)}
@@ -71,13 +72,14 @@ export default function ProductForm({ product }) {
 				/>
 			))}
 			<button
-				className='bg-black rounded-lg text-white px-2 py-3 mt-3 hover:bg-gray-800'
+				className='bg-black rounded-sm text-white px-2 py-3 mt-8 hover:bg-gray-800'
 				onClick={() => {
 					addToCart(selectedVariant);
 				}}
 			>
 				Tilføj til ølkasse
 			</button>
+			<p className='py-6'>{product.description}</p>
 		</div>
 	);
 }
