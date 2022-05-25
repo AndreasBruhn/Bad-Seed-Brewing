@@ -8,8 +8,12 @@ import { FreeMode, Navigation, Pagination } from 'swiper';
 export default function ProductPageContent({ product }) {
 	const images = [];
 
+
+
 	product.images.edges.map((image, i) => {
-		console.log(product.title);
+		console.log(product.images.edges[0].node.url)
+		console.log(product.title)
+		console.log(product.handle);
 		images.push(
 			<SwiperSlide key={`slide-${i}`}>
 				<Image src={image.node.url} alt={image.node.altText} layout='fill' objectFit='cover' />
@@ -37,17 +41,11 @@ export default function ProductPageContent({ product }) {
 						>
 							{images}
 						</Swiper>
-						{/* <Image
-							src={product.images.edges[0].node.url}
-							alt={product.images.edges[0].node.altText}
-							layout={'fill'}
-							objectFit={'cover'}
-						/> */}
 					</div>
 				</div>
 				<ProductForm product={product} />
 			</div>
-			<hr className='border-1 max-w-7xl mx-auto'/>
+			<hr className='border-1 max-w-7xl mx-auto' />
 			{/* <p className='pt-16 space-y-8 md:space-x-4 lg:space-x-8 max-w-3xl w-11/12 mx-auto'>
 				{product.description}
 			</p> */}

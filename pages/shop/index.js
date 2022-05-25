@@ -6,7 +6,7 @@ import { XIcon } from '@heroicons/react/outline';
 import { ChevronDownIcon, FilterIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/solid';
 
 const sortOptions = [
-	{ name: 'Mest Populære', href: '#', current: true },
+	{ name: 'Mest Populære', href: '#', current: true},
 	{ name: 'Bedste Rating', href: '#', current: false },
 	{ name: 'Nyeste', href: '#', current: false },
 	{ name: 'Pris: Lav til Høj', href: '#', current: false },
@@ -26,7 +26,7 @@ const filters = [
 		options: [
 			{ value: 'ipa', label: 'Ipa', checked: false },
 			{ value: 'stout', label: 'Stout', checked: false },
-			{ value: 'pilsner', label: 'Pilsner', checked: true },
+			{ value: 'pilsner', label: 'Pilsner', checked: false },
 			{ value: 'lager', label: 'Lager', checked: false },
 			{ value: 'rauchbier', label: 'Rauchbier', checked: false },
 		],

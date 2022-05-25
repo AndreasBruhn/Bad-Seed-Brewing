@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function AboutHero() {
 	return (
 		<div className='h-full justify-center flex md:flex-row flex-col-reverse py-12 md:py-0 max-w-2xl mx-auto md:max-w-7xl'>
-			<div className='w-full flex flex-start flex-col justify-center bg-white md:w-1/2 pt-12 md:pt-0 px-12'>
+			<div className='w-full flex flex-start flex-col justify-center bg-transparent md:w-1/2 pt-12 md:pt-0 px-12'>
 				<h1 className='font-extrabold text-gray-900'>
 					<p className='text-black text-4xl sm:text-5xl md:text-6xl'>Hvem er vi?</p>
 				</h1>
@@ -19,7 +19,7 @@ export default function AboutHero() {
 					</Link>
 				</div>
 			</div>
-			<div className='w-full bg-transparent md:w-1/2 md:py-12'>
+			<div className='w-full bg-transparent md:w-1/2 md:py-0'>
 				<Image src={require('../assets/img/omOs-hero.png')} alt='hero' layout='responsive' />
 			</div>
 		</div>

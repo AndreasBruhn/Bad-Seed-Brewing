@@ -10,8 +10,10 @@ export default function about() {
 	return (
 		<>
 			<AboutHero />
-			<RichText />
-			<ImgComp_omOs />
+			<div className='bg-gradient-to-t from-transparent to-slate-100'>
+				<RichText />
+				<ImgComp_omOs />
+			</div>
 			<ImgWithText_omOs />
 			<MasonryWithText />
 		</>

@@ -8,11 +8,10 @@ export const ProductCard = ({ product }) => {
 	const { handle, title, description } = product.node; // destruct for our product title and handle
 	const { altText, url } = product.node.images.edges[0].node; // destruct for our product image
 	const { price } = product.node.priceRange.minVariantPrice.amount; // destruct for our product price
-
-	console.log(product.node.priceRange.minVariantPrice.amount);
+	const linkUrl = `/products`;
 
 	return (
-		<Link href={`products/${handle}`}>
+		<Link href={`${linkUrl}/${handle}`}>
 			<a className='group text-center'>
 				<div className='w-full bg-gray-200 rounded-3xl overflow-hidden'>
 					<div className='relative group-hover:opacity-75 h-96'>
