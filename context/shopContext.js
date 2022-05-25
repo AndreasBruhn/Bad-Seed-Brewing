@@ -52,7 +52,7 @@ export default function ShopProvider({ children }) {
 			// if the id is not in the cart, we want to add the newItem to the cart
 			cart.map((item) => {
 				if (item.id === newItem.id) {
-					item.variantQuantity++;
+					item.variantQuantity += newItem.newVariantQuantity;
 					newCart = [...cart];
 					added = true;
 				}

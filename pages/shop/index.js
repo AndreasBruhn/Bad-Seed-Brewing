@@ -3,62 +3,41 @@ import ProductList from '../../components/ProductList';
 import { Fragment, useState } from 'react';
 import { Dialog, Disclosure, Menu, Transition } from '@headlessui/react';
 import { XIcon } from '@heroicons/react/outline';
-import {
-	ChevronDownIcon,
-	FilterIcon,
-	MinusSmIcon,
-	PlusSmIcon,
-	ViewGridIcon,
-} from '@heroicons/react/solid';
+import { ChevronDownIcon, FilterIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/solid';
 
 const sortOptions = [
-	{ name: 'Most Popular', href: '#', current: true },
-	{ name: 'Best Rating', href: '#', current: false },
-	{ name: 'Newest', href: '#', current: false },
-	{ name: 'Price: Low to High', href: '#', current: false },
-	{ name: 'Price: High to Low', href: '#', current: false },
+	{ name: 'Mest Populære', href: '#', current: true },
+	{ name: 'Bedste Rating', href: '#', current: false },
+	{ name: 'Nyeste', href: '#', current: false },
+	{ name: 'Pris: Lav til Høj', href: '#', current: false },
+	{ name: 'Pris: Høj til Lav ', href: '#', current: false },
 ];
 const subCategories = [
-	{ name: 'Totes', href: '#' },
-	{ name: 'Backpacks', href: '#' },
-	{ name: 'Travel Bags', href: '#' },
-	{ name: 'Hip Bags', href: '#' },
-	{ name: 'Laptop Sleeves', href: '#' },
+	{ name: 'Alle produkter', href: '#' },
+	{ name: 'Brandy', href: '#' },
+	{ name: 'Gin', href: '#' },
+	{ name: 'Bundles', href: '#' },
+	{ name: 'Ølglas', href: '#' },
 ];
 const filters = [
 	{
-		id: 'color',
-		name: 'Color',
+		id: 'type',
+		name: 'Type',
 		options: [
-			{ value: 'white', label: 'White', checked: false },
-			{ value: 'beige', label: 'Beige', checked: false },
-			{ value: 'blue', label: 'Blue', checked: true },
-			{ value: 'brown', label: 'Brown', checked: false },
-			{ value: 'green', label: 'Green', checked: false },
+			{ value: 'ipa', label: 'Ipa', checked: false },
+			{ value: 'stout', label: 'Stout', checked: false },
+			{ value: 'pilsner', label: 'Pilsner', checked: true },
+			{ value: 'lager', label: 'Lager', checked: false },
+			{ value: 'rauchbier', label: 'Rauchbier', checked: false },
 			{ value: 'purple', label: 'Purple', checked: false },
 		],
 	},
 	{
-		id: 'category',
-		name: 'Category',
+		id: 'procent',
+		name: 'Procent',
 		options: [
-			{ value: 'new-arrivals', label: 'New Arrivals', checked: false },
-			{ value: 'sale', label: 'Sale', checked: false },
-			{ value: 'travel', label: 'Travel', checked: true },
-			{ value: 'organization', label: 'Organization', checked: false },
-			{ value: 'accessories', label: 'Accessories', checked: false },
-		],
-	},
-	{
-		id: 'size',
-		name: 'Size',
-		options: [
-			{ value: '2l', label: '2L', checked: false },
-			{ value: '6l', label: '6L', checked: false },
-			{ value: '12l', label: '12L', checked: false },
-			{ value: '18l', label: '18L', checked: false },
-			{ value: '20l', label: '20L', checked: false },
-			{ value: '40l', label: '40L', checked: true },
+			{ value: '4-5', label: '4-5', checked: false },
+			{ value: '6-8', label: '6-8', checked: true },
 		],
 	},
 ];
@@ -114,7 +93,7 @@ export default function Shop({ products }) {
 
 									{/* Filters */}
 									<form className='mt-4 border-t border-gray-200'>
-										<h3 className='sr-only'>Categories</h3>
+										{/* <h3 className='sr-only'>Kategorier</h3> */}
 										<ul role='list' className='font-medium text-gray-900 px-2 py-3'>
 											{subCategories.map((category) => (
 												<li key={category.name}>
@@ -179,14 +158,15 @@ export default function Shop({ products }) {
 				</Transition.Root>
 
 				<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='relative z-10 flex items-baseline justify-between pt-24 pb-6 border-b border-gray-200'>
-						<h1 className='text-4xl font-extrabold tracking-tight text-gray-900'>New Arrivals</h1>
+					<div className='relative z-10 flex items-baseline justify-end md:justify-between pt-8  pb-6 border-b border-gray-200'>
+						{/* if heading adjust above div to "justify-between" mobile layout */}
+						<h2 className='text-2xl hidden md:block font-extrabold tracking-tight text-gray-900'>Filtrer</h2>
 
 						<div className='flex items-center'>
 							<Menu as='div' className='relative inline-block text-left'>
 								<div>
 									<Menu.Button className='group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900'>
-										Sort
+										Sorter
 										<ChevronDownIcon
 											className='flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500'
 											aria-hidden='true'
@@ -228,13 +208,6 @@ export default function Shop({ products }) {
 
 							<button
 								type='button'
-								className='p-2 -m-2 ml-5 sm:ml-7 text-gray-400 hover:text-gray-500'
-							>
-								<span className='sr-only'>View grid</span>
-								<ViewGridIcon className='w-5 h-5' aria-hidden='true' />
-							</button>
-							<button
-								type='button'
 								className='p-2 -m-2 ml-4 sm:ml-6 text-gray-400 hover:text-gray-500 lg:hidden'
 								onClick={() => setMobileFiltersOpen(true)}
 							>
@@ -246,13 +219,13 @@ export default function Shop({ products }) {
 
 					<section aria-labelledby='products-heading' className='pt-6 pb-24'>
 						<h2 id='products-heading' className='sr-only'>
-							Products
+							Produkter
 						</h2>
 
 						<div className='grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10'>
 							{/* Filters */}
 							<form className='hidden lg:block'>
-								<h3 className='sr-only'>Categories</h3>
+								{/* <h3 className='sr-only'>Kategorier</h3> */}
 								<ul
 									role='list'
 									className='text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200'
