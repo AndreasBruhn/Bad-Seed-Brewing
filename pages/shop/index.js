@@ -29,6 +29,7 @@ const filters = [
 			{ value: 'pilsner', label: 'Pilsner', checked: false },
 			{ value: 'lager', label: 'Lager', checked: false },
 			{ value: 'rauchbier', label: 'Rauchbier', checked: false },
+			{ value: 'maibock', label: 'Maibock', checked: false },
 		],
 	},
 	{

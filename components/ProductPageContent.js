@@ -16,7 +16,7 @@ export default function ProductPageContent({ product }) {
 		console.log(product.handle);
 		images.push(
 			<SwiperSlide key={`slide-${i}`}>
-				<Image src={image.node.url} alt={image.node.altText} layout='fill' objectFit='cover' />
+				<Image src={image.node.url} alt={image.node.altText} layout='fill' objectFit='contain' />
 			</SwiperSlide>
 		);
 	});
@@ -24,7 +24,7 @@ export default function ProductPageContent({ product }) {
 	return (
 		<>
 			<div className='flex flex-col justify-center items-center space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 max-w-6xl w-11/12 mx-auto'>
-				<div className='w-full h-full max-w-md  bg-white  overflow-hidden  md:w-1/2'>
+				<div className='w-full h-full max-w-md md:w-1/2'>
 					<div className='relative  h-[700px] w-full'>
 						<Swiper
 							style={{
@@ -37,7 +37,7 @@ export default function ProductPageContent({ product }) {
 							navigation={true}
 							pagination={{ dynamicBullets: true }}
 							modules={[FreeMode, Navigation, Pagination]}
-							className='mySwiper2 border rounded-2xl shadow-lg'
+							className='mySwiper2 bg-gray-200'
 						>
 							{images}
 						</Swiper>

@@ -13,9 +13,9 @@ export const ProductCard = ({ product }) => {
 	return (
 		<Link href={`${linkUrl}/${handle}`}>
 			<a className='group text-center'>
-				<div className='w-full bg-gray-200 rounded-3xl overflow-hidden'>
+				<div className='w-full bg-gray-200 rounded-sm overflow-hidden'>
 					<div className='relative group-hover:opacity-75 h-96'>
-						<Image src={url} alt={altText} layout='fill' objectFit='cover' />
+						<Image src={url} alt={altText} layout='fill' objectFit='contain' />
 					</div>
 				</div>
 				<h3 className='mt-4 text-lg font-medium text-gray-900 uppercase'>{title}</h3>
