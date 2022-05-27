@@ -13,7 +13,7 @@ export const ProductCard = ({ product }) => {
 	return (
 		<Link href={`${linkUrl}/${handle}`}>
 			<a className='group text-center'>
-				<div className='w-full bg-gray-200 rounded-sm overflow-hidden'>
+				<div className='w-full bg-gray-100 rounded-sm overflow-hidden'>
 					<div className='relative group-hover:opacity-75 h-96'>
 						<Image src={url} alt={altText} layout='fill' objectFit='contain' />
 					</div>
