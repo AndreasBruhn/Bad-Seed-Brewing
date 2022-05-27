@@ -24,7 +24,7 @@ const filters = [
 		id: 'type',
 		name: 'Type',
 		options: [
-			{ value: 'ipa', label: 'Ipa', checked: false },
+			{ value: 'ipa', label: 'IPA', checked: false },
 			{ value: 'stout', label: 'Stout', checked: false },
 			{ value: 'pilsner', label: 'Pilsner', checked: false },
 			{ value: 'lager', label: 'Lager', checked: false },
