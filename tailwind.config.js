@@ -5,6 +5,7 @@ module.exports = {
 			Height: {
 				'600px': '600px',
 				'700px': '700px',
+				// '980px': '980px',
 			},
 			Spacing: {
 				'13%': '13%',

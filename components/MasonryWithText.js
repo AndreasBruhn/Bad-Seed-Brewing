@@ -10,14 +10,14 @@ export default function MasonryWithText() {
 	];
 
 	return (
-		<section className='flex flex-col md:flex-row pb-12 px-12 max-w-2xl mx-auto md:max-w-7xl md:pb-12'>
+		<section className='flex flex-col md:flex-row px-12 max-w-2xl mx-auto md:max-w-7xl md:pt-8'>
 			<div className='w-full bg-transparent md:w-1/2 md:py-12'>
 				<MasonryGrid masonryImages={masonryImages} columnCount='2' gap='5' />
 			</div>
 
-			<div className='col-span-5 w-full flex flex-col pb-12 justify-center  md:w-1/2'>
+			<div className='col-span-5 w-full flex flex-col pt-8 md:w-1/2'>
 				<h2 className='text-3xl sm:text-5xl mb-6'>Vores historie</h2>
-				<div className='col-span-7 w-full flex flex-start flex-col justify-center bg-white '>
+				<div className='col-span-7 w-full flex flex-start flex-col bg-white '>
 					<p className=''>
 						Det startede i 2015 med nordjyden Fredrik Hector Schmidt, der startede Bad Seed Brewing
 						som et fantom bryggeri, hvilket vil sige at han lejede sig ind hos andre bryghuse for at

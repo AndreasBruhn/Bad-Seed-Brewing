@@ -11,7 +11,7 @@ export default function Hero() {
 						<Image src={require('../assets/img/hero.png')} alt='hero' layout='responsive' />
 					</div>
 				</div>
-				<div className='w-full flex flex-start flex-col p-16 md:p-36 bg-white md:w-1/2'>
+				<div className='w-full flex flex-start flex-col p-8 lg:p-36 bg-white md:w-1/2'>
 					<h1 className='font-extrabold text-gray-900'>
 						<p className='text-black text-4xl sm:text-5xl md:text-6xl'>
 							Dristig, smagfuld og letdrikkelig øl.
@@ -22,7 +22,7 @@ export default function Hero() {
 					</h2>
 					<div className='mt-5 max-w-md flex items-center md:mt-8'>
 					<Link href='/shop' passHref>
-							<a className='inline-flex btn-container justify-center items-center px-12 w-3/5 font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
+							<a className='inline-flex btn-container justify-center items-center px-12 font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
 								Shop her <ArrowRightIcon className='icon h-5 w-5 ml-2 text-gray-900' />
 							</a>
 						</Link>
