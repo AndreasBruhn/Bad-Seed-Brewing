@@ -10,8 +10,7 @@ const navigation = [
 	{ name: 'Team', href: '#', current: false },
 	{ name: 'Projects', href: '#', current: false },
 	{ name: 'Calendar', href: '#', current: false },
-]
-
+];
 
 export default function Nav() {
 	const { cart, cartOpen, setCartOpen } = useContext(CartContext);
@@ -31,9 +30,9 @@ export default function Nav() {
 							<Image
 								src={require('../assets/img/bad-seed-brewing-logo.jpg')}
 								alt={'logo'}
-								layout='fixed'
-								width={'75px'}
-								height={'75px'}
+								layout='fill'
+								objectFit='cover'
+								style={'Padding: 10px;'}
 							/>
 						</span>
 					</a>
@@ -52,7 +51,10 @@ export default function Nav() {
 						className='text-md font-bold cursor-pointer relative'
 						onClick={() => setCartOpen(!cartOpen)}
 					>
-						<ShoppingBagIcon className='h-7 w-7' /> <span className='bg-black flex items-center justify-center w-6 h-6 text-white rounded-full absolute bottom-[65%] left-[70%]'>{cartQuantity}</span>
+						<ShoppingBagIcon className='h-7 w-7' />{' '}
+						<span className='bg-black flex items-center justify-center w-6 h-6 text-white rounded-full absolute bottom-[65%] left-[70%]'>
+							{cartQuantity}
+						</span>
 					</a>
 				</nav>
 				<MiniCart cart={cart} />
