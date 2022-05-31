@@ -28,7 +28,7 @@ export default function ProductPageContent({ product }) {
 					<div className='relative  h-[700px] w-full'>
 						<Swiper
 							style={{
-								'--swiper-navigation-color': '#fff',
+								'--swiper-navigation-color': '#000',
 								'--swiper-pagination-color': '#fff',
 								'--swiper-navigation-size': '35px',
 							}}

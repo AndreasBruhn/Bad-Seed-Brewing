@@ -14,6 +14,7 @@ const sortOptions = [
 ];
 const subCategories = [
 	{ name: 'Alle produkter', href: '#' },
+	{ name: 'Øl', href: '#' },
 	{ name: 'Brandy', href: '#' },
 	{ name: 'Gin', href: '#' },
 	{ name: 'Bundles', href: '#' },

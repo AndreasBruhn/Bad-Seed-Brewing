@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { ArrowRightIcon } from '@heroicons/react/outline';
 
 export default function Hero() {
 	return (
@@ -21,8 +22,8 @@ export default function Hero() {
 					</h2>
 					<div className='mt-5 max-w-md flex items-center md:mt-8'>
 					<Link href='/shop' passHref>
-							<a className='inline-flex justify-center px-12 w-3/5 font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
-								Shop her
+							<a className='inline-flex btn-container justify-center items-center px-12 w-3/5 font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
+								Shop her <ArrowRightIcon className='icon h-5 w-5 ml-2 text-gray-900' />
 							</a>
 						</Link>
 					</div>

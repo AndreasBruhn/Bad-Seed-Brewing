@@ -19,7 +19,7 @@ export default function FloatingImgSection() {
 				<div className='btn-container'>
 					<Link href='/shop' passHref>
 						<a className='inline-flex justify-center items-center mt-6 px-12  font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
-							Se hele udvalget <ArrowRightIcon className='icon h-5 w-5 ml-2 text-gray-900' />
+							Læs mere <ArrowRightIcon className='icon h-5 w-5 ml-2 text-gray-900' />
 						</a>
 					</Link>
 				</div>

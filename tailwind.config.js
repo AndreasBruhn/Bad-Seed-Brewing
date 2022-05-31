@@ -29,6 +29,7 @@ module.exports = {
 			},
 			colors: {
 				'floating-yellow': '#FCB64D',
+				'featured-gray': '#F3F5F4',
 			},
 		},
 	},
