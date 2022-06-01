@@ -43,25 +43,21 @@ export default function Footer() {
 					<div className='flex flex-col' key={index}>
 						<h2 className='text-xl sm:text-3xl text-white'>{item.title}</h2>
 						<p className='my-6'>{item.description}</p>
-						<span className='flex'>
-							{item.facebook}
-							{item.instagram}
-						</span>
+						<a className='flex'>
+							<FaFacebookF className='hover:text-gray-100 cursor-pointer w-6 h-6' />
+							<FaInstagram className='hover:text-gray-100 cursor-pointer w-6 h-6' />
+						</a>
 					</div>
 				))}
 				{info2.map((item, index) => (
 					<div className='flex flex-col' key={index}>
 						<h2 className='text-xl sm:text-3xl text-white'>{item.title}</h2>
-						<a href={item.smileyHref} className='text-gray-300 hover:text-gray-900 mt-6'>
+						<a href={item.smileyHref} className='text-gray-300 hover:text-gray-100 mt-6'>
 							{item.smileyName}
 						</a>
-						<a href={item.policyHref} className='text-gray-300 hover:text-gray-900'>
+						<a href={item.policyHref} className='text-gray-300 hover:text-gray-100'>
 							{item.policyName}
 						</a>
-						<span className='flex'>
-							{item.facebook}
-							{item.instagram}
-						</span>
 					</div>
 				))}
 
@@ -72,13 +68,13 @@ export default function Footer() {
 						<p className=''>{item.zip}</p>
 						<span>
 							Telefon:
-							<a href={item.phone} className='text-gray-300 hover:text-gray-900'>
+							<a href={item.phone} className='text-gray-300 hover:text-gray-100'>
 								+45 30319268
 							</a>
 						</span>
 						<span>
 							Email:
-							<a href={item.email} className='text-gray-300 hover:text-gray-900'>
+							<a href={item.email} className='text-gray-300 hover:text-gray-100'>
 								info@badseedbrewing.dk
 							</a>
 						</span>

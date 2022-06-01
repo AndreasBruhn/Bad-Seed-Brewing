@@ -42,7 +42,6 @@ export default function ProductForm({ product }) {
 			return { ...prevState, [name]: value };
 		});
 
-  // NEEDS TO BE EXPLAINED!
 		const selection = {
 			...selectedOptions,
 			[name]: value,
@@ -72,7 +71,7 @@ export default function ProductForm({ product }) {
 				/>
 			))}
 			<button
-				className='bg-black rounded-sm text-white px-2 py-3 mt-8 hover:bg-gray-800'
+				className='bg-black rounded-sm text-white px-2 py-3 mt-8 uppercase hover:bg-gray-800'
 				onClick={() => {
 					addToCart(selectedVariant);
 				}}
