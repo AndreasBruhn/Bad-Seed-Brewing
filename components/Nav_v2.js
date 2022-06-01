@@ -81,7 +81,7 @@ export default function Nav() {
 											</li>
 										))}
 										<a
-											className='text-md font-bold cursor-pointer relative border-l-2 border-gray-700 pl-6'
+											className='text-md font-bold cursor-pointer relative border-l-2 border-gray-300 pl-6'
 											onClick={() => setCartOpen(!cartOpen)}
 										>
 											<ShoppingBagIcon className='h-7 w-7 ' />{' '}

@@ -29,7 +29,6 @@ module.exports = {
 				masonry: 'repeat(8, 1fr)',
 			},
 			colors: {
-				'floating-yellow': '#FCB64D',
 				'featured-gray': '#F3F5F4',
 			},
 		},

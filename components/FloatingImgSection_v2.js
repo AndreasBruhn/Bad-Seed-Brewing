@@ -29,7 +29,7 @@ export default function FloatingImgSection_v2() {
 					<Image src={require('../assets/img/2BeerGlass.png')} alt='hero' layout='responsive' />
 				</div>
 
-				<div className='hidden lg:block bg-floating-yellow md:absolute h-72 w-96 md:top-32 md:left-56'></div>
+				<div className='hidden lg:block bg-gray-100 md:absolute h-72 w-96 md:top-32 md:left-56'></div>
 
 				<div className='lg:absolute w-full md:top-80 md:left-64 lg:h-96 lg:w-96 z-10'>
 					<Image src={require('../assets/img/pouringBeer.png')} alt='hero' layout='responsive' />
