@@ -8,12 +8,7 @@ import { FreeMode, Navigation, Pagination } from 'swiper';
 export default function ProductPageContent({ product }) {
 	const images = [];
 
-
-
 	product.images.edges.map((image, i) => {
-		console.log(product.images.edges[0].node.url)
-		console.log(product.title)
-		console.log(product.handle);
 		images.push(
 			<SwiperSlide key={`slide-${i}`}>
 				<Image src={image.node.url} alt={image.node.altText} layout='fill' objectFit='contain' />

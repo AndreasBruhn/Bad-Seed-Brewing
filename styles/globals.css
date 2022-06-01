@@ -76,12 +76,12 @@ a {
 	object-fit: cover;
 }
 
-.btn-container:hover > .icon {
+.btn-container:hover > .icon, .btn-container:hover > a > .icon {
 	color: #fff;
 }
 
-.btn-container:hover > a > .icon {
-	color: #fff;
+.acc-btn-container:hover  .icon {
+	color: rgba(0,30,189,0.8);
 }
 
 .blockquote:after {
