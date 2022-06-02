@@ -23,8 +23,8 @@ export const AccordionCard = ({ product }) => {
 				<span
 					className={`, ${
 						isHovered
-							? 'duration-300 ease-in-out scale-125 absolute w-32 h-32 rounded-full bg-gray-100 left-[21%] top-[58%]'
-							: 'duration-300 ease-in-out absolute w-32 h-32 rounded-full bg-gray-100 left-[21%] top-[58%]'
+							? 'duration-300 ease-in-out scale-125 absolute w-32 h-32 rounded-full bg-gray-100 left-[21%] bottom-[65%]'
+							: 'duration-300 ease-in-out absolute w-32 h-32 rounded-full bg-gray-100 left-[21%] bottom-[65%]'
 					}`}
 				></span>
 				<div className='relative duration-300 ease-in-out group-hover:scale-125 h-64'>
