@@ -55,6 +55,7 @@ export default function ShopProvider({ children }) {
 					item.variantQuantity += newItem.newVariantQuantity;
 					newCart = [...cart];
 					added = true;
+					newItem.newVariantQuantity = 1;
 				}
 			});
 
@@ -64,7 +65,7 @@ export default function ShopProvider({ children }) {
 
 			setCart(newCart); // updating the cart state
 			const newCheckout = await updateCheckout(checkoutId, newCart); // create a new checkout object
-			localStorage.setItem('checkoutId', JSON.stringify([newCart, newCheckout]));
+			localStorage.setItem('checkout_id', JSON.stringify([newCart, newCheckout]));
 		}
 	}
 

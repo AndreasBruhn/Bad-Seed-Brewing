@@ -23,7 +23,7 @@ export default function ProductForm({ product }) {
 			variantTitle: variant.node.title,
 			variantPrice: variant.node.priceV2.amount,
 			variantQuantity: 1,
-			newVariantQuantity: 1
+			newVariantQuantity: 1,
 		};
 	});
 

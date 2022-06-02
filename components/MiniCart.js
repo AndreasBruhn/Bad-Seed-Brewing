@@ -9,6 +9,7 @@ import { formatter } from '../utils/helpers';
 
 // Tailwindcss Shopping Cart component -> https://tailwindui.com/components/ecommerce/components/shopping-carts
 export default function MiniCart({ cart }) {
+	console.log(cart)
 	const cancelButtonRef = useRef();
 	const { cartOpen, setCartOpen, checkoutUrl, removeCartItem } = useContext(CartContext);
 
@@ -78,7 +79,8 @@ export default function MiniCart({ cart }) {
 													{cart.length > 0 ? (
 														<ul role='list' className='-my-6 divide-y divide-gray-200'>
 															{cart.map((product) => (
-																<li key={product.id} className='flex py-6'>
+																console.log(product),
+																<li key={product.id + Math.random()} className='flex py-6'>
 																	<div className='relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border border-gray-200'>
 																		<Image
 																			src={product.image}
@@ -159,7 +161,7 @@ export default function MiniCart({ cart }) {
 															className='font-medium hover:text-gray-800'
 															onClick={() => setCartOpen(false)}
 														>
-															Fortsæt med shoppe<span aria-hidden='true'> &rarr;</span>
+															Fortsæt med at shoppe<span aria-hidden='true'> &rarr;</span>
 														</button>
 													</p>
 												</div>

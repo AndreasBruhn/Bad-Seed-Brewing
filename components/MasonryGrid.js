@@ -19,15 +19,3 @@ export default function MasonryGrid({ masonryImages }) {
 	);
 }
 
-{
-	/* <Image
-src={require('../assets/img/RichTextImgComp_img.png')}
-alt='hero'
-layout='responsive'
-/> */
-}
-// {masonryImages.map((image, index) => {
-// 	const { src, width, height } = image.default;
-// 	console.log(src);
-// 	<Image src={src} key={index} alt='masonry' layout='responsive' />;
-// })}
