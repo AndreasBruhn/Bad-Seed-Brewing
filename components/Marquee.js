@@ -23,8 +23,8 @@ export default function Marquee({ headline }) {
 						)}
 					</Ticker>
 				</div>
-				<div className='relative  h-64'>
-					<Image src={require('../assets/img/hero_v1.png')} alt={`alt`} layout='fill' objectFit='contain' />
+				<div className='relative h-28 w-28 top-[87%] top-[6%]'>
+					<Image src={require('../assets/img/white-logo.png')} alt={`alt`} layout='fill' objectFit='contain' />
 				</div>
 			</div>
 		</div>
