@@ -35,7 +35,7 @@ export default function Home({ products }) {
 			<BannerHighlights />
 			<Accordion products={products} />
 			<FeaturedSection />
-			<Marquee headline='Øl med omtanke' />
+			<Marquee headline='Vi brygger på noget' />
 			<ProductGrid products={products} />
 			<FloatingImgSection_v2 />
 		</div>
