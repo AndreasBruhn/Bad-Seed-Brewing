@@ -12,9 +12,9 @@ export default function Marquee({ headline }) {
 				backgroundPosition: '',
 			}}
 		>
-			<div className='relative w-full h-full backdrop-blur-xs bg-black/40'>
+			<div className='relative w-full h-full '>
 				<div className='w-full py-24 md:py-64 '>
-					<Ticker height={150} offset={80}>
+					<Ticker height={325} offset={80}>
 						{() => (
 							<h2 className='text-3xl md:text-7xl lg:text-[300px] font-extrabold mr-16 lg:mr-32 text-white'>
 								{' '}
@@ -23,7 +23,7 @@ export default function Marquee({ headline }) {
 						)}
 					</Ticker>
 				</div>
-				<div className='relative h-28 w-28 left-[87%] top-[6%]'>
+				<div className='relative h-28 w-28 left-[87%] bottom-[20%]'>
 					<Image src={require('../assets/img/white-logo.png')} alt={`alt`} layout='fill' objectFit='contain' />
 				</div>
 			</div>
