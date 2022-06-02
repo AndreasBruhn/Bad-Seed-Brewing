@@ -20,13 +20,19 @@ export const AccordionCard = ({ product }) => {
 			className='group h-full text-center '
 		>
 			<div className='w-full relative'>
-				<span className='absolute w-32 h-32 rounded-full bg-gray-100 left-[21%] top-[58%]'></span>
-				<div className='relative duration-300 group-hover:scale-125 h-64'>
+				<span
+					className={`, ${
+						isHovered
+							? 'duration-300 ease-in-out scale-125 absolute w-32 h-32 rounded-full bg-gray-100 left-[21%] top-[58%]'
+							: 'absolute w-32 h-32 rounded-full bg-gray-100 left-[21%] top-[58%]'
+					}`}
+				></span>
+				<div className='relative duration-300 ease-in-out group-hover:scale-125 h-64'>
 					<Image src={url} alt={altText} layout='fill' objectFit='contain' />
 				</div>
 			</div>
 			<h3 className='mt-8 text-lg font-medium text-gray-900 uppercase pb-4'>{title}</h3>
-			<div className="relative duration-200">
+			<div className='relative duration-200'>
 				<p className={`${isHovered ? 'block line-clamp-4' : 'hidden'}`}>{description}</p>
 			</div>
 			<div className='pt-4 flex justify-center items-center acc-btn-container'>
