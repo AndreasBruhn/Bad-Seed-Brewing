@@ -4,6 +4,8 @@ import ProductForm from './ProductForm';
 import RecommendedList from './RecommendedList';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Navigation, Pagination } from 'swiper';
+import Link from 'next/link';
+import { CgFormatSlash } from 'react-icons/cg';
 
 export default function ProductPageContent({ product }) {
 	const images = [];
@@ -18,6 +20,36 @@ export default function ProductPageContent({ product }) {
 
 	return (
 		<>
+			<nav className='flex px-72' aria-label='Breadcrumb'>
+				<ol className='inline-flex items-center space-x-1 md:space-x-3'>
+					<li className='inline-flex items-center'>
+						<Link href='/'>
+							<a className='inline-flex items-center text-sm font-medium text-gray-900 hover:text-gray-500'>
+								Hjem
+							</a>
+						</Link>
+					</li>
+					<li>
+						<div className='flex items-center'>
+							<CgFormatSlash className='w-6 h-6' />
+							<Link href='/shop'>
+								<a
+									href='#'
+									className='ml-1 text-sm font-medium text-gray-900 hover:text-gray-500 md:ml-2 '
+								>
+									Shop
+								</a>
+							</Link>
+						</div>
+					</li>
+					<li aria-current='page'>
+						<div className='flex items-center'>
+							<CgFormatSlash className='w-6 h-6' />
+							<span className='ml-1 text-sm font-medium text-gray-900 md:ml-2 '>Produkt</span>
+						</div>
+					</li>
+				</ol>
+			</nav>
 			<div className='flex flex-col justify-center items-center space-y-8 md:flex-row md:items-start md:space-y-0 md:space-x-4 lg:space-x-8 max-w-6xl w-11/12 mx-auto'>
 				<div className='w-full h-full max-w-md md:w-1/2'>
 					<div className='relative  h-[700px] w-full'>

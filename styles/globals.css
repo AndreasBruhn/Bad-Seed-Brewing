@@ -62,6 +62,7 @@ a {
 .swiper-slide {
 	background-size: cover;
 	background-position: center;
+	background-color: #f4f4f4;
 }
 
 .mySwiper2 {

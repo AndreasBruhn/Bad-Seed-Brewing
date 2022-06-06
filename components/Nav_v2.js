@@ -34,7 +34,7 @@ export default function Nav() {
 			{({ open }) => (
 				<>
 					<div className='max-w-7xl mx-auto px-2 sm:px-0'>
-						<div className='relative flex items-center justify-between'>
+						<div className='relative pt-4 px-8 flex items-center justify-between'>
 							{/* logo  */}
 							<Link href='/' passHref>
 								<a className='cursor-pointer'>
