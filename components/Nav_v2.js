@@ -34,7 +34,7 @@ export default function Nav() {
 			{({ open }) => (
 				<>
 					<div className='max-w-7xl mx-auto px-2 sm:px-0'>
-						<div className='relative pt-4 px-8 flex items-center justify-between'>
+						<div className='relative py-4 px-8 flex items-center justify-between'>
 							{/* logo  */}
 							<Link href='/' passHref>
 								<a className='cursor-pointer'>
@@ -51,7 +51,7 @@ export default function Nav() {
 							</Link>
 							<div className='inset-y-0 left-0 flex items-center sm:hidden'>
 								{/* Mobile menu button*/}
-								<Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
+								<Disclosure.Button className='inline-flex items-center justify-center p-2 rounded-md text-gray-900 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white'>
 									<span className='sr-only'>Open main menu</span>
 									{open ? (
 										<XIcon className='block h-6 w-6' aria-hidden='true' />
@@ -70,9 +70,9 @@ export default function Nav() {
 													href={item.href}
 													className={cn(
 														router.pathname == item.href
-															? 'text-gray-700 font-bold border-b-2 border-w border-gray-700'
+															? 'text-gray-700 font-bold border-b-2 border-w border-gray-900'
 															: '',
-														'p-2 hover:border-b-2 hover:outline-none hover:border-gray-700'
+														'p-2 hover:border-b-2 hover:outline-none hover:border-gray-900'
 													)}
 													aria-current={item.current ? 'page' : undefined}
 												>
@@ -97,7 +97,7 @@ export default function Nav() {
 
 					{/* Mobile menu  */}
 					<Disclosure.Panel className='sm:hidden'>
-						<div className='px-2 pt-2 pb-3 space-y-1'>
+						<div className='flex flex-col items-center px-2 pt-2 pb-3 space-y-1'>
 							{navigation.map((item) => (
 								<Disclosure.Button
 									key={item.name}

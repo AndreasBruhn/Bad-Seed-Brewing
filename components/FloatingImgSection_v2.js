@@ -17,7 +17,7 @@ export default function FloatingImgSection_v2() {
 					ingredienser og innovative opskrifter.{' '}
 				</p>
 				<div className='btn-container'>
-					<Link href='/shop' passHref>
+					<Link href='/about' passHref>
 						<a className='inline-flex justify-center items-center mt-6 px-12  font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
 							Læs mere <ArrowRightIcon className='icon h-5 w-5 ml-2 text-gray-900' />
 						</a>

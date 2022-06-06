@@ -50,7 +50,7 @@ export default function Footer() {
 					</div>
 				))}
 				{info2.map((item, index) => (
-					<div className='flex flex-col' key={index}>
+					<div className='flex flex-col my-6' key={index}>
 						<h2 className='text-xl sm:text-3xl text-white'>{item.title}</h2>
 						<a href={item.smileyHref} className='text-gray-300 hover:text-gray-100 mt-6'>
 							{item.smileyName}
