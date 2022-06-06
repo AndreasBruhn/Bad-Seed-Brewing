@@ -7,7 +7,7 @@ export default function Breadcrumbs({ products }) {
 	const { title } = products;
 
 	return (
-		<nav className='flex pl-4 mb-4 md:pl-20 lg:pl-[17.5rem]' aria-label='Breadcrumb'>
+		<nav className='flex pl-4 mb-4 md:pl-20 lg:pl-36 max-w-6xl mx-auto' aria-label='Breadcrumb'>
 			<ol className='inline-flex items-center space-x-1 md:space-x-3'>
 				<li className='inline-flex items-center'>
 					<Link href='/'>

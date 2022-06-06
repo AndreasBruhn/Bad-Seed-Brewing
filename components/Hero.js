@@ -13,14 +13,14 @@ export default function Hero() {
 				</div>
 				<div className='w-full flex flex-start flex-col p-8 lg:p-36 bg-white md:w-1/2'>
 					<h1 className='font-extrabold text-gray-900'>
-						<p className='text-black text-4xl sm:text-5xl md:text-6xl'>
+						<p className='text-black text-center md:text-left text-4xl sm:text-5xl md:text-6xl'>
 							Dristig, smagfuld og letdrikkelig øl.
 						</p>
 					</h1>
-					<h2 className='mt-3 max-w-md text-gray-900 sm:text-lg md:mt-5 md:text-xl md:max-x-3xl'>
+					<h2 className='mt-3 max-w-md text-gray-900 text-center md:text-left sm:text-lg md:mt-5 md:text-xl md:max-x-3xl'>
 						Gå på opdagelse i vores mange varianter af specialøl.
 					</h2>
-					<div className='mt-5 max-w-md flex items-center md:mt-8'>
+					<div className='mt-5 max-w-md flex items-center mx-auto md:mx-0 md:mt-8'>
 					<Link href='/shop' passHref>
 							<a className='inline-flex btn-container justify-center items-center px-12 font-medium py-3 border-2 border-black text-black bg-transparent hover:bg-black hover:text-white hover:border-black'>
 								Shop her <ArrowRightIcon className='icon h-5 w-5 ml-2 text-gray-900' />
