@@ -1,5 +1,14 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+# Credit to
+
+In this project the products are based on mockups from -> www.freepik.com
+
+The used mockups can be found here:
+
+Mockup 1: https://www.freepik.com/free-psd/cold-brew-can-mockup-psd-coffee-branding_20075372.htm#page=3&query=beer%20can&position=37&from_view=search
+Mockup 2: https://www.freepik.com/free-psd/beer-can-mockup-psd-cool-product-branding_20189931.htm#&position=5&from_view=detail#query=b&position=5&from_view=detail#position=5
+
 ## Getting Started
 
 First, run the development server:
