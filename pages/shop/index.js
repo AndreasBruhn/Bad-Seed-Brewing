@@ -81,7 +81,7 @@ export default function Shop({ products }) {
 	const [sortOption, setSortOption] = useState('Best Sellers'); // prepare for sorting functionality
 
 	return (
-		<div className='bg-white'>
+		<div className='bg-white mt-[90px] lg:mt-[114px]'>
 			<div>
 				{/* Mobile filter dialog */}
 				<Transition.Root show={mobileFiltersOpen} as={Fragment}>

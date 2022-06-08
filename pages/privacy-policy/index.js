@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function index() {
 	return (
-		<section className='max-w-2xl md:max-w-7xl mx-auto text-black p-8'>
+		<section className='max-w-2xl md:max-w-7xl mx-auto text-black p-8 mt-[100px] lg:mt-[114px]'>
 			<div className='flex flex-col'>
 				<h1 className='text-xl sm:text-4xl font-bold'>Handels- & leveringsbetingelser</h1>
 				<p className='my-6'>
