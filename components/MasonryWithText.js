@@ -2,17 +2,10 @@ import Image from 'next/image';
 import MasonryGrid from './MasonryGrid';
 
 export default function MasonryWithText() {
-	const masonryImages = [
-		require('../assets/img/masonry1.png'),
-		require('../assets/img/masonry2.png'),
-		require('../assets/img/masonry3.png'),
-		require('../assets/img/masonry4.png'),
-	];
-
 	return (
 		<section className='flex flex-col md:flex-row px-12 max-w-2xl mx-auto md:max-w-7xl md:pt-8'>
 			<div className='w-full bg-transparent md:w-1/2 md:py-12'>
-				<MasonryGrid masonryImages={masonryImages} columnCount='2' gap='5' />
+				<MasonryGrid />
 			</div>
 
 			<div className='col-span-5 w-full flex flex-col pt-8 md:w-1/2'>

@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRightIcon } from '@heroicons/react/outline';
-import Parallax from 'react-rellax';
+import { motion } from 'framer-motion';
 
 export default function FloatingImgSection() {
 	return (
@@ -25,15 +25,33 @@ export default function FloatingImgSection() {
 				</div>
 			</div>
 			<div className='flex flex-col md:relative h-auto lg:w-2/3 md:mx-auto'>
-				<div className='lg:absolute w-full md:left-96 md:z-10 md:w-96 lg:w-72'>
+				<motion.div
+					viewport={{ once: false }}
+					initial={{ opacity: 0, x: 50 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ type: 'easeIn', duration: 0.5, delay: 0.2 }}
+					className='lg:absolute w-full md:left-96 md:z-10 md:w-96 lg:w-72'
+				>
 					<Image src={require('../assets/img/2BeerGlass.png')} alt='hero' layout='responsive' />
-				</div>
+				</motion.div>
 
-				<div className='hidden lg:block bg-gray-100 md:absolute h-72 w-96 md:top-32 md:left-56'></div>
+				<motion.div
+					viewport={{ once: false }}
+					initial={{ opacity: 0, x: -50 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ type: 'easeIn', duration: 0.6, delay: 0.4 }}
+					className='hidden lg:block bg-gray-100 md:absolute h-72 w-96 md:top-32 md:left-56'
+				></motion.div>
 
-				<div className='lg:absolute w-full md:top-80 md:left-64 lg:h-96 lg:w-96 z-10'>
+				<motion.div
+					viewport={{ once: false }}
+					initial={{ opacity: 0, y: 10 }}
+					whileInView={{ opacity: 1, x: 0 }}
+					transition={{ type: 'easeIn', duration: 0.7, delay: 0.6 }}
+					className='lg:absolute w-full md:top-80 md:left-64 lg:h-96 lg:w-96 z-10'
+				>
 					<Image src={require('../assets/img/pouringBeer.png')} alt='hero' layout='responsive' />
-				</div>
+				</motion.div>
 			</div>
 		</section>
 	);

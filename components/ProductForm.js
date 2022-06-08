@@ -81,7 +81,7 @@ export default function ProductForm({ product }) {
 		counter > 1 ? (counter -= 1) : (counter = 1);
 		setCounter(counter);
 
-		cart.map((_) => {
+		cart.map(() => {
 			if (cart.includes(selectedVariant) && counter > 1) {
 				selectedVariant.newVariantQuantity = counter;
 				setCounter(selectedVariant.newVariantQuantity);
@@ -116,7 +116,7 @@ export default function ProductForm({ product }) {
 			setCounter(selectedVariant.variantQuantity);
 		}
 		if (e.key === 0 || 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9) {
-			e.target.blur();
+			e.target.blur(); // removes focus from input
 		}
 		if (isNaN(counter) || e.target.value == 0) {
 			e.target.value = 1;
@@ -124,7 +124,7 @@ export default function ProductForm({ product }) {
 			counter = 1;
 			selectedVariant.variantQuantity = counter;
 			selectedVariant.newVariantQuantity = counter;
-			setCounter(1);
+			setCounter(1); //	reset counter to 1
 		}
 	};
 
