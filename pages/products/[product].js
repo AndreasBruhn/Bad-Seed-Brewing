@@ -3,7 +3,7 @@ import { getAllProducts, getProduct } from '../../lib/query';
 
 export default function ProductPage({ product }) {
 	return (
-		<div className='min-h-screen py-12 sm:pt-20'>
+		<div className='min-h-screen py-12 sm:pt-20 mt-[70px] lg:mt-[80px]'>
 			<ProductPageContent product={product} />
 		</div>
 	);

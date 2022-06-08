@@ -11,7 +11,7 @@ export default function ProductOptions({ name, values, selectedOptions, setOptio
 			<div className='inline-flex items-center flex-wrap w-full'>
 				<Listbox value={selected} onChange={setSelected}>
 					<div className='relative mt-1 w-full'>
-						<Listbox.Button className='border rounded-sm relative w-full py-2 pl-3 text-left bg-white shadow-md cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-gray-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500'>
+						<Listbox.Button className='border rounded-sm relative w-full py-2 pl-3 text-left bg-white cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-gray-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500'>
 							<span className='block truncate xxs:text-center'>{selected}</span>
 							<span className='absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none'>
 								<ChevronDownIcon className='w-5 h-5 text-gray-400' aria-hidden='true' />
@@ -23,7 +23,7 @@ export default function ProductOptions({ name, values, selectedOptions, setOptio
 							leaveFrom='opacity-100'
 							leaveTo='opacity-0'
 						>
-							<Listbox.Options className='z-[9999] absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-md shadow-lg max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
+							<Listbox.Options className='z-[9999] absolute w-full py-1 mt-1 overflow-auto text-base bg-white rounded-sm max-h-60 ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm'>
 								{values.map((value) => {
 									const id = `option-${name}-${value}`;
 									const checked = selectedOptions[name] === value;

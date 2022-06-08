@@ -145,7 +145,7 @@ export default function ProductForm({ product }) {
 					selectedVariant={selectedVariant}
 				/>
 			))}
-			<div className='text-center border rounded-sm mt-6 max-w-[10rem] shadow-md flex justify-between my-2 xxs:w-full'>
+			<div className='text-center border rounded-sm mt-6 max-w-[10rem] flex justify-between my-2 xxs:w-full'>
 				<button
 					onClick={decrement}
 					className=' text-black highlight-removal transition-all ease-in-out duration-100 px-3 py-2 font-semibold hover:bg-gray-200 active:bg-black active:text-white'
@@ -180,7 +180,7 @@ export default function ProductForm({ product }) {
 				<span className='flex'>
 					<button
 						onClick={increment}
-						className=' text-black highlight-removal transition-all ease-in-out duration-100 px-3 py-2 font-semibold hover:bg-gray-200 active:bg-black active:text-white rounded-r-md'
+						className=' text-black highlight-removal transition-all ease-in-out duration-100 px-3 py-2 font-semibold hover:bg-gray-200 active:bg-black active:text-white'
 					>
 						<svg
 							xmlns='http://www.w3.org/2000/svg'
