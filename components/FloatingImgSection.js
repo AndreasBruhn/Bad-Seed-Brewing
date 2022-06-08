@@ -27,8 +27,8 @@ export default function FloatingImgSection() {
 			<div className='flex flex-col md:relative h-auto lg:w-2/3 md:mx-auto'>
 				<motion.div
 					viewport={{ once: false }}
-					initial={{ opacity: 0, x: 50 }}
-					whileInView={{ opacity: 1, x: 0 }}
+					initial={{ opacity: 0, y: 50 }}
+					whileInView={{ opacity: 1, y: 0 }}
 					transition={{ type: 'easeIn', duration: 0.5, delay: 0.2 }}
 					className='lg:absolute w-full md:left-96 md:z-10 md:w-96 lg:w-72'
 				>

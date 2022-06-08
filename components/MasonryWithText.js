@@ -9,8 +9,8 @@ export default function MasonryWithText() {
 			</div>
 
 			<div className='col-span-5 w-full flex flex-col pt-8 md:w-1/2'>
-				<h2 className='text-3xl sm:text-5xl mb-6'>Vores historie</h2>
-				<div className='col-span-7 w-full flex flex-start flex-col bg-white '>
+				<h2 className='text-center md:text-left text-3xl sm:text-5xl mb-6'>Vores historie</h2>
+				<div className='col-span-7 w-full flex flex-start flex-col bg-white text-center md:text-left'>
 					<p className=''>
 						Det startede i 2015 med nordjyden Fredrik Hector Schmidt, der startede Bad Seed Brewing
 						som et fantom bryggeri, hvilket vil sige at han lejede sig ind hos andre bryghuse for at

@@ -8,9 +8,9 @@ import RichText from '../../components/RichText_omOs';
 
 export default function about() {
 	return (
-		<div className='mt-[70px] lg:mt-[114px]'>
+		<div className='mt-[70px] md:mt-[120px] md:mt-[114px]'>
 			<AboutHero />
-			<div className='bg-gradient-to-t from-transparent to-slate-100'>
+			<div className='bg-gradient-to-t text-center md:text-left from-transparent to-slate-100'>
 				<RichText />
 				<ImgComp_omOs />
 			</div>
