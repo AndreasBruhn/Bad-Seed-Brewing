@@ -5,7 +5,7 @@ import { ArrowRightIcon } from '@heroicons/react/outline';
 export default function Hero() {
 	return (
 		<>
-			<div className='h-full mx-auto flex flex-col md:flex-row flex-wrap'>
+			<div className='h-full mx-auto flex flex-col md:flex-row flex-wrap mt-[114px]'>
 				<div className='w-full bg-gradient-to-t md:w-1/2 from-white to-gray-200 flex flex-start flex-col '>
 					<div className=' relative right-4 md:left-[14%]  md:scale-100 md:w-full bg-transparent'>
 						<Image src={require('../assets/img/hero_v1.png')} alt='hero' layout='responsive' />

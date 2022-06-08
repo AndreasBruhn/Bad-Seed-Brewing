@@ -30,7 +30,7 @@ export default function Nav() {
 	});
 
 	return (
-		<Disclosure as='nav' className='bg-white'>
+		<Disclosure as='nav' className='bg-white fixed z-30 w-full'>
 			{({ open }) => (
 				<>
 					<div className='max-w-7xl mx-auto px-2 sm:px-0'>
@@ -43,8 +43,9 @@ export default function Nav() {
 											src={require('../assets/img/bad-seed-brewing-logo.jpg')}
 											alt={'logo'}
 											layout='fixed'
-											width={'75px'}
-											height={'75px'}
+											width={'70px'}
+											height={'70px'}
+											className="logo"
 										/>
 									</span>
 								</a>

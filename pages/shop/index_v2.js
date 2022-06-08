@@ -6,7 +6,7 @@ import { XIcon } from '@heroicons/react/outline';
 import { ChevronDownIcon, FilterIcon, MinusSmIcon, PlusSmIcon } from '@heroicons/react/solid';
 
 const sortOptions = [
-	{ name: 'Mest Populære', href: '#', current: true },
+	{ name: 'Mest Populære', href: '#', current: true},
 	{ name: 'Bedste Rating', href: '#', current: false },
 	{ name: 'Nyeste', href: '#', current: false },
 	{ name: 'Pris: Lav til Høj', href: '#', current: false },
@@ -20,8 +20,7 @@ const subCategories = [
 	{ name: 'Bundles', href: '#' },
 	{ name: 'Ølglas', href: '#' },
 ];
-
-const filterMobile = [
+const filters = [
 	{
 		id: 'type',
 		name: 'Type',
@@ -34,32 +33,6 @@ const filterMobile = [
 			{ value: 'maibock', label: 'Maibock', checked: false },
 		],
 	},
-	{
-		id: 'procent',
-		name: 'Procent',
-		options: [
-			{ value: '4-5', label: '4-5%', checked: false },
-			{ value: '6-8', label: '6-8%', checked: true },
-		],
-	},
-];
-
-const filterType = [
-	{
-		id: 'type',
-		name: 'Type',
-		options: [
-			{ value: 'ipa', label: 'IPA', checked: false },
-			{ value: 'stout', label: 'Stout', checked: false },
-			{ value: 'pilsner', label: 'Pilsner', checked: false },
-			{ value: 'lager', label: 'Lager', checked: false },
-			{ value: 'rauchbier', label: 'Rauchbier', checked: false },
-			{ value: 'maibock', label: 'Maibock', checked: false },
-		],
-	},
-];
-
-const filterVol = [
 	{
 		id: 'procent',
 		name: 'Procent',
@@ -77,8 +50,8 @@ function classNames(...classes) {
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 export default function Shop({ products }) {
 	const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
-	const [showSortOptions, setShowSortOptions] = useState(false); // prepare for sorting functionality
-	const [sortOption, setSortOption] = useState('Best Sellers'); // prepare for sorting functionality
+	const [showSortOptions, setShowSortOptions] = useState(false)
+	const [sortOption, setSortOption] = useState('Best Sellers')
 
 	return (
 		<div className='bg-white'>
@@ -134,7 +107,7 @@ export default function Shop({ products }) {
 											))}
 										</ul>
 
-										{filterMobile.map((section) => (
+										{filters.map((section) => (
 											<Disclosure
 												as='div'
 												key={section.id}
@@ -188,114 +161,55 @@ export default function Shop({ products }) {
 				</Transition.Root>
 
 				<main className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-					<div className='relative z-10 flex items-baseline justify-end md:justify-start pt-8  pb-6 border-b border-gray-200'>
+					<div className='relative z-10 flex items-baseline justify-end md:justify-between pt-8  pb-6 border-b border-gray-200'>
 						{/* if heading -> adjust above div to "justify-between" mobile layout */}
-						<div>
-							<h2 className='text-2xl hidden md:block font-extrabold tracking-tight text-gray-900'>
-								Kategorier
-							</h2>
-						</div>
+						<h2 className='text-2xl hidden md:block font-extrabold tracking-tight text-gray-900'>Filtrer</h2>
 
 						<div className='flex items-center'>
-							<div className="hidden lg:flex flex-row items-center lg:ml-48">
-								<h6 className='font-base font-semibold mr-4'>Filtrér efter</h6>
-								{filterType.map((section) => (
-									<Menu
-										as='div'
-										key={section.id}
-										className='relative border py-2 px-4 inline-block text-left mr-4'
-									>
-										<div>
-											<Menu.Button className='group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900'>
-												Type
-												<ChevronDownIcon
-													className='flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500'
-													aria-hidden='true'
-												/>
-											</Menu.Button>
-										</div>
-										<Transition
-											as={Fragment}
-											enter='transition ease-out duration-100'
-											enterFrom='transform opacity-0 scale-95'
-											enterTo='transform opacity-100 scale-100'
-											leave='transition ease-in duration-75'
-											leaveFrom='transform opacity-100 scale-100'
-											leaveTo='transform opacity-0 scale-95'
-										>
-											<Menu.Items className='origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'>
-												<div className='py-1'>
-													{section.options.map((option, optionIdx) => (
-														<Menu.Item key={option.name}>
-															{({ active }) => (
-																<a
-																	href={option.href}
-																	className={classNames(
-																		option.current ? 'font-medium text-gray-900' : 'text-gray-500',
-																		active ? 'bg-gray-100' : '',
-																		'block px-4 py-2 text-sm'
-																	)}
-																>
-																	{option.label}
-																</a>
-															)}
-														</Menu.Item>
-													))}
-												</div>
-											</Menu.Items>
-										</Transition>
-									</Menu>
-								))}
-								{filterVol.map((section) => (
-									<Menu
-										as='div'
-										key={section.id}
-										className='relative border py-2 px-4 inline-block text-left mr-4'
-									>
-										<div>
-											<Menu.Button className='group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900'>
-												Procent
-												<ChevronDownIcon
-													className='flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500'
-													aria-hidden='true'
-												/>
-											</Menu.Button>
-										</div>
-										<Transition
-											as={Fragment}
-											enter='transition ease-out duration-100'
-											enterFrom='transform opacity-0 scale-95'
-											enterTo='transform opacity-100 scale-100'
-											leave='transition ease-in duration-75'
-											leaveFrom='transform opacity-100 scale-100'
-											leaveTo='transform opacity-0 scale-95'
-										>
-											<Menu.Items className='origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'>
-												<div className='py-1'>
-													{section.options.map((option, optionIdx) => (
-														<Menu.Item key={option.name}>
-															{({ active }) => (
-																<a
-																	href={option.href}
-																	className={classNames(
-																		option.current ? 'font-medium text-gray-900' : 'text-gray-500',
-																		active ? 'bg-gray-100' : '',
-																		'block px-4 py-2 text-sm'
-																	)}
-																>
-																	{option.label}
-																</a>
-															)}
-														</Menu.Item>
-													))}
-												</div>
-											</Menu.Items>
-										</Transition>
-									</Menu>
-								))}
-							</div>
+							<Menu as='div' className='relative inline-block text-left'>
+								<div>
+									<Menu.Button className='group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900'>
+										Sorter
+										<ChevronDownIcon
+											className='flex-shrink-0 -mr-1 ml-1 h-5 w-5 text-gray-400 group-hover:text-gray-500'
+											aria-hidden='true'
+										/>
+									</Menu.Button>
+								</div>
 
-							<Menu as='div' className='relative border py-2 px-4 inline-block text-left lg:ml-[30rem]'>
+								<Transition
+									as={Fragment}
+									enter='transition ease-out duration-100'
+									enterFrom='transform opacity-0 scale-95'
+									enterTo='transform opacity-100 scale-100'
+									leave='transition ease-in duration-75'
+									leaveFrom='transform opacity-100 scale-100'
+									leaveTo='transform opacity-0 scale-95'
+								>
+									<Menu.Items className='origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-2xl bg-white ring-1 ring-black ring-opacity-5 focus:outline-none'>
+										<div className='py-1'>
+											{sortOptions.map((option) => (
+												<Menu.Item key={option.name}>
+													{({ active }) => (
+														<a
+															href={option.href}
+															className={classNames(
+																option.current ? 'font-medium text-gray-900' : 'text-gray-500',
+																active ? 'bg-gray-100' : '',
+																'block px-4 py-2 text-sm'
+															)}
+														>
+															{option.name}
+														</a>
+													)}
+												</Menu.Item>
+											))}
+										</div>
+									</Menu.Items>
+								</Transition>
+							</Menu>
+
+							<Menu as='div' className='relative inline-block text-left'>
 								<div>
 									<Menu.Button className='group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900'>
 										Sorter
@@ -360,7 +274,7 @@ export default function Shop({ products }) {
 								{/* <h3 className='sr-only'>Kategorier</h3> */}
 								<ul
 									role='list'
-									className='text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200 lg:border-none'
+									className='text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200'
 								>
 									{subCategories.map((category) => (
 										<li key={category.name}>
@@ -369,8 +283,8 @@ export default function Shop({ products }) {
 									))}
 								</ul>
 
-								{filterType.map((section) => (
-									<Disclosure as='div' key={section.id} className='border-b lg:hidden border-gray-200 py-6'>
+								{filters.map((section) => (
+									<Disclosure as='div' key={section.id} className='border-b border-gray-200 py-6'>
 										{({ open }) => (
 											<>
 												<h3 className='-my-3 flow-root'>

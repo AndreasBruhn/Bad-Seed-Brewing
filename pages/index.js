@@ -11,8 +11,7 @@ import Accordion from '../components/Accordion';
 
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
 export default function Home({ products }) {
-
-	console.log(products)
+	console.log(products);
 	return (
 		<div className='relative'>
 			<Head>

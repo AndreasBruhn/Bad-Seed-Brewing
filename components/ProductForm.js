@@ -56,6 +56,7 @@ export default function ProductForm({ product }) {
 		});
 	}
 
+	// increment count of products -> limit is set to 9
 	const increment = () => {
 		counter < 9 ? (counter += 1) : (counter = 9);
 		setCounter(counter);
@@ -75,6 +76,7 @@ export default function ProductForm({ product }) {
 		}
 	};
 
+	// decrement count of products -> limit is set to 9
 	const decrement = () => {
 		counter > 1 ? (counter -= 1) : (counter = 1);
 		setCounter(counter);
@@ -94,6 +96,8 @@ export default function ProductForm({ product }) {
 		}
 	};
 
+	// this will handle the count of product determined in the counter
+	// and add the specified number of products to the cart
 	const handleChange = (e) => {
 		counter = Number(e.target.value);
 		setCounter(counter);
