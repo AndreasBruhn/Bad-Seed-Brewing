@@ -1,12 +1,13 @@
 import React from 'react';
 import Footer from './Footer';
-import Nav_v2 from './Nav_v2';
+// import Nav from './Nav';
+import Nav from './Nav';
 
 // the whole application is the child of the Layout component
 export default function Layout({ children }) {
 	return (
 		<div className='flex flex-col justify-between min-h-screen'>
-			<Nav_v2 />
+			<Nav />
 
 			<main>{children}</main>
 

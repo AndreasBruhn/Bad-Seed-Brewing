@@ -6,7 +6,7 @@ import BannerHighlights from '../components/BannerHighlights';
 import FeaturedSection from '../components/FeaturedSection';
 import Marquee from '../components/Marquee';
 import ProductGrid from '../components/ProductGrid';
-import FloatingImgSection_v2 from '../components/FloatingImgSection_v2';
+import FloatingImgSection from '../components/FloatingImgSection';
 import Accordion from '../components/Accordion';
 
 // destructuring the "props" from our "getStaticProps" function -> https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment
@@ -36,7 +36,7 @@ export default function Home({ products }) {
 			<FeaturedSection />
 			<Marquee headline='Vi brygger på noget' />
 			<ProductGrid products={products} />
-			<FloatingImgSection_v2 />
+			<FloatingImgSection />
 		</div>
 	);
 }

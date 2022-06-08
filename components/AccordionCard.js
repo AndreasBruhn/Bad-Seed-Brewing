@@ -21,7 +21,7 @@ export const AccordionCard = ({ product }) => {
 		>
 			<div className='w-full relative'>
 				<span
-					className={`, ${
+					className={` ${
 						isHovered
 							? 'duration-300 ease-in-out scale-125 absolute w-32 h-32 rounded-full bg-gray-100 left-[107px] bottom-[65%] lg:left-[21%]'
 							: 'duration-300 ease-in-out absolute w-32 h-32 rounded-full bg-gray-100 left-[83px] bottom-[65%] lg:left-[21%]'
@@ -37,11 +37,11 @@ export const AccordionCard = ({ product }) => {
 			</div>
 			<div className='pt-4 flex justify-center items-center acc-btn-container'>
 				<Link href={`${linkUrl}/${handle}`}>
-					<a className='text-center text-[#001EBD] font-semibold p-2 hover:text-[#001EBD]/80 rounded-sm'>
+					<a className='text-center text-[#001EBD] font-semibold p-2 hover:text-[#001EBD]/80 rounded-sm flex items-center'>
 						Læs mere
+						<ArrowRightIcon className='icon h-5 w-5 text-[#0129ec] ml-2' />
 					</a>
 				</Link>
-				<ArrowRightIcon className='icon h-5 w-5 text-[#0129ec]' />
 			</div>
 		</div>
 	);

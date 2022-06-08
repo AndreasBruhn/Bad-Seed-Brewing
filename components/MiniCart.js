@@ -88,7 +88,7 @@ export default function MiniCart({ cart }) {
 																					src={product.image}
 																					alt={product.title}
 																					layout='fill'
-																					objectFit='cover'
+																					objectFit='contain'
 																				/>
 																			</div>
 
