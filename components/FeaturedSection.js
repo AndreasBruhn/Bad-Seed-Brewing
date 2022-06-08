@@ -19,7 +19,7 @@ export default function FeaturedSection() {
 					</a>
 				</Link>
 			</div>
-			<div className='lg:col-span-7 w-full flex flex-start flex-col justify-center bg-white'>
+			<div className='mt-20 lg:mt-0 w-full flex flex-start flex-col justify-center bg-white lg:col-span-7'>
 				<Image src={require('../assets/img/featuredSection.png')} alt='hero' layout='responsive' />
 			</div>
 		</section>

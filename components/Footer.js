@@ -74,7 +74,7 @@ export default function Footer() {
 						</span>
 						<span>
 							Email:
-							<a href={item.email} className='text-gray-300 hover:text-gray-100'>
+							<a href={item.email} className='text-gray-300 hover:text-gray-100 break-words'>
 								info@badseedbrewing.dk
 							</a>
 						</span>

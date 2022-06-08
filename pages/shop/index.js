@@ -116,7 +116,7 @@ export default function Shop({ products }) {
 											className='-mr-2 w-10 h-10 bg-white p-2 rounded-md flex items-center justify-center text-gray-400'
 											onClick={() => setMobileFiltersOpen(false)}
 										>
-											<span className='sr-only'>Close menu</span>
+											<span className='sr-only'>Luk menu</span>
 											<XIcon className='h-6 w-6' aria-hidden='true' />
 										</button>
 									</div>
@@ -197,7 +197,7 @@ export default function Shop({ products }) {
 						</div>
 
 						<div className='flex items-center'>
-							<div className="hidden lg:flex flex-row items-center lg:ml-48">
+							<div className='hidden lg:flex flex-row items-center lg:ml-48'>
 								<h6 className='font-base font-semibold mr-4'>Filtrér efter</h6>
 								{filterType.map((section) => (
 									<Menu
@@ -295,7 +295,10 @@ export default function Shop({ products }) {
 								))}
 							</div>
 
-							<Menu as='div' className='relative border py-2 px-4 inline-block text-left lg:ml-[30rem]'>
+							<Menu
+								as='div'
+								className='relative border py-2 px-4 inline-block text-left lg:ml-[30rem]'
+							>
 								<div>
 									<Menu.Button className='group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900'>
 										Sorter
@@ -357,7 +360,6 @@ export default function Shop({ products }) {
 						<div className='grid grid-cols-1 lg:grid-cols-4 gap-x-8 gap-y-10'>
 							{/* Filters */}
 							<form className='hidden lg:block'>
-								{/* <h3 className='sr-only'>Kategorier</h3> */}
 								<ul
 									role='list'
 									className='text-sm font-medium text-gray-900 space-y-4 pb-6 border-b border-gray-200 lg:border-none'
@@ -370,7 +372,11 @@ export default function Shop({ products }) {
 								</ul>
 
 								{filterType.map((section) => (
-									<Disclosure as='div' key={section.id} className='border-b lg:hidden border-gray-200 py-6'>
+									<Disclosure
+										as='div'
+										key={section.id}
+										className='border-b lg:hidden border-gray-200 py-6'
+									>
 										{({ open }) => (
 											<>
 												<h3 className='-my-3 flow-root'>
